@@ -1,0 +1,7 @@
+TRX-101 rögzítve. Termék: Dell Vostro 3501. Egységár: 120000.0 Ft.
+ TRX-105 rögzítve. Termék: Oracle Cloud Szerver. Egységár: 12000.0 Ft.
+ TRX-106 rögzítve. Termék: SEO Audit. Egységár: 50000.0 Ft.
+ TRX-109 rögzítve. Termék: Logo Tervezés. Egységár: 5000.0 Ft.
+ TRX-111 rögzítve. Termék: Server Setup. Egységár: 3000.0 Ft.
+ TRX-115 rögzítve. Termék: Projektmenedzsment. Egységár: 20000.0 Ft.
+ 

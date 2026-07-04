@@ -1,0 +1,15 @@
+TRX-101;Dell Vostro 3501;120000;1
+TRX-63918;Lotus Gym Diákbérlet;15000;0
+TRX-103;Python Kurzus;Kétezer;1
+TRX-104;Prémium Tárhely;45000
+TRX-105;Oracle Cloud Szerver;24000;2
+TRX-106;SEO Audit;50000;1
+TRX-107;Weboldal Karbantartás;Nulla;2
+TRX-108;Domain Regisztráció;3500;0
+TRX-109;Logo Tervezés;15000;3
+TRX-110;Konzultáció;10000
+TRX-111;Server Setup;15000;5
+TRX-112;Kiszállási díj;Sok;1
+TRX-113;Sürgősségi felár;20000;0
+TRX-114;Havi karbantartás;30000
+TRX-115;Projektmenedzsment;40000;2

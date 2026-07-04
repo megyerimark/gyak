@@ -1,0 +1,108 @@
+ -Sztornózva (0 darab): {sor[0]} - {sor[1]}
+ -Adathiba: {sor[0]}
+   - Hiányos tranzakció: {sor[0]}
+ -Adathiba: {sor[0]}
+   -Sztornózva (0 darab): {sor[0]} - {sor[1]}
+ - Hiányos tranzakció: {sor[0]}
+ -Adathiba: {sor[0]}
+   -Sztornózva (0 darab): {sor[0]} - {sor[1]}
+ - Hiányos tranzakció: {sor[0]}
+ -Sztornózva (0 darab): {sor[0]} - {sor[1]}
+ -Adathiba: {sor[0]}
+   - Hiányos tranzakció: {sor[0]}
+ -Adathiba: {sor[0]}
+   -Sztornózva (0 darab): {sor[0]} - {sor[1]}
+ - Hiányos tranzakció: {sor[0]}
+ -Adathiba: {sor[0]}
+   -Sztornózva (0 darab): {sor[0]} - {sor[1]}
+ - Hiányos tranzakció: {sor[0]}
+ -Sztornózva (0 darab): TRX-63918 - Lotus Gym Diákbérlet
+ -Adathiba: TRX-103
+   - Hiányos tranzakció: TRX-104
+ -Adathiba: TRX-107
+   -Sztornózva (0 darab): TRX-108 - Domain Regisztráció
+ - Hiányos tranzakció: TRX-110
+ -Adathiba: TRX-112
+   -Sztornózva (0 darab): TRX-113 - Sürgősségi felár
+ - Hiányos tranzakció: TRX-114
+ -Sztornózva: TRX-63918 - Lotus Gym Diákbérlet
+ -Adathiba: TRX-103
+   - Hiányos tranzakció: TRX-104
+ -Adathiba: TRX-107
+   -Sztornózva: TRX-108 - Domain Regisztráció
+ - Hiányos tranzakció: TRX-110
+ -Adathiba: TRX-112
+   -Sztornózva: TRX-113 - Sürgősségi felár
+ - Hiányos tranzakció: TRX-114
+ -Sztornózva: TRX-63918 - Lotus Gym Diákbérlet
+ -Adathiba: TRX-103
+   - Hiányos tranzakció: TRX-104
+ -Adathiba: TRX-107
+   -Sztornózva: TRX-108 - Domain Regisztráció
+ - Hiányos tranzakció: TRX-110
+ -Adathiba: TRX-112
+   -Sztornózva: TRX-113 - Sürgősségi felár
+ - Hiányos tranzakció: TRX-114
+ -Sztornózva: TRX-63918 - Lotus Gym Diákbérlet
+ -Adathiba: TRX-103
+   - Hiányos tranzakció: TRX-104
+ -Adathiba: TRX-107
+   -Sztornózva: TRX-108 - Domain Regisztráció
+ - Hiányos tranzakció: TRX-110
+ -Adathiba: TRX-112
+   -Sztornózva: TRX-113 - Sürgősségi felár
+ - Hiányos tranzakció: TRX-114
+ -Sztornózva: TRX-63918 - Lotus Gym Diákbérlet
+ -Adathiba: TRX-103
+   - Hiányos tranzakció: TRX-104
+ -Adathiba: TRX-107
+   -Sztornózva: TRX-108 - Domain Regisztráció
+ - Hiányos tranzakció: TRX-110
+ -Adathiba: TRX-112
+   -Sztornózva: TRX-113 - Sürgősségi felár
+ - Hiányos tranzakció: TRX-114
+ -Sztornózva: TRX-63918 - Lotus Gym Diákbérlet
+ -Adathiba: TRX-103
+   - Hiányos tranzakció: TRX-104
+ -Adathiba: TRX-107
+   -Sztornózva: TRX-108 - Domain Regisztráció
+ - Hiányos tranzakció: TRX-110
+ -Adathiba: TRX-112
+   -Sztornózva: TRX-113 - Sürgősségi felár
+ - Hiányos tranzakció: TRX-114
+ -Sztornózva: TRX-63918 - Lotus Gym Diákbérlet
+ -Adathiba: TRX-103
+   - Hiányos tranzakció: TRX-104
+ -Adathiba: TRX-107
+   -Sztornózva: TRX-108 - Domain Regisztráció
+ - Hiányos tranzakció: TRX-110
+ -Adathiba: TRX-112
+   -Sztornózva: TRX-113 - Sürgősségi felár
+ - Hiányos tranzakció: TRX-114
+ -Sztornózva: TRX-63918 - Lotus Gym Diákbérlet
+ -Adathiba: TRX-103
+   - Hiányos tranzakció: TRX-104
+ -Adathiba: TRX-107
+   -Sztornózva: TRX-108 - Domain Regisztráció
+ - Hiányos tranzakció: TRX-110
+ -Adathiba: TRX-112
+   -Sztornózva: TRX-113 - Sürgősségi felár
+ - Hiányos tranzakció: TRX-114
+ -Sztornózva: TRX-63918 - Lotus Gym Diákbérlet
+ -Adathiba: TRX-103
+   - Hiányos tranzakció: TRX-104
+ -Adathiba: TRX-107
+   -Sztornózva: TRX-108 - Domain Regisztráció
+ - Hiányos tranzakció: TRX-110
+ -Adathiba: TRX-112
+   -Sztornózva: TRX-113 - Sürgősségi felár
+ - Hiányos tranzakció: TRX-114
+ -Sztornózva: TRX-63918 - Lotus Gym Diákbérlet
+ -Adathiba: TRX-103
+   - Hiányos tranzakció:  TRX-104
+ -Adathiba: TRX-107
+   -Sztornózva: TRX-108 - Domain Regisztráció
+ - Hiányos tranzakció:  TRX-110
+ -Adathiba: TRX-112
+   -Sztornózva: TRX-113 - Sürgősségi felár
+ - Hiányos tranzakció:  TRX-114
