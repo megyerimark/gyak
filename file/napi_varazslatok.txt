@@ -1,0 +1,5 @@
+Tűzlabda:15.5
+Gyógyítás:8.2
+Időmanipuláció:250.0
+Pajzs:12.1
+Sötét Energia:310.5

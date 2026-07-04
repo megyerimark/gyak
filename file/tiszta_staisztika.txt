@@ -1,0 +1,2 @@
+Web-Frontend működik. Terhelés: 50.0 kérés/mp
+Storage-1 működik. Terhelés: 50.0 kérés/mp

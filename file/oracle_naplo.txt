@@ -1,0 +1,6 @@
+Web-Frontend;500;10
+Adatbazis-1;1000;0
+API-Gateway;Száz;5
+Cache-1
+Storage-1;400;8
+Feldolgozo-Node;250;A

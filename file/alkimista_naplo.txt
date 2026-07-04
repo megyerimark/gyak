@@ -1,0 +1,5 @@
+Életerő Elixír;20;5;10
+Tűzlé;50;0;10
+Méreg;Sok;5;2
+Láthatatlanság
+Bölcsesség Főzete;30;3;8

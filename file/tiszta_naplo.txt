@@ -1,0 +1,5 @@
+1. Sötét Energia elhasználva. Levont energia:105300.25, Megmaradt kristályod: 4894170.75
+2. Pajzs elhasználva. Levont energia:681.21, Megmaradt kristályod: 4893489.54
+3. Időmanipuláció elhasználva. Levont energia:69696.0, Megmaradt kristályod: 4823793.54
+4. Gyógyítás elhasználva. Levont energia:492.84, Megmaradt kristályod: 4823300.7
+5. Tűzlabda elhasználva. Levont energia:870.25, Megmaradt kristályod: 4822430.45

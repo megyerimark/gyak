@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Szellemekkel</title>
+    <style>
+        body {
+            background-color: #222;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: 40px;
+        }
+
+        #score-board {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: yellow;
+        }
+
+        canvas {
+            background-color: black;
+            border: 4px solid #1919A6;
+            box-shadow: 0 0 20px rgba(25, 25, 166, 0.8);
+            border-radius: 5px;
+        }
+
+        p {
+            color: #aaa;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="score-board">Pontszám: <span id="score">0</span></div>
+    
+    <canvas id="gameCanvas" width="450" height="450"></canvas>
+    
+    <p>Használd a ⬆️ ⬇️ ⬅️ ➡️ nyilakat a mozgáshoz!<br>Frissítsd az oldalt (F5) az újrakezdéshez.</p>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const scoreElement = document.getElementById('score');
+
+        const tileSize = 30; 
+        let score = 0;
+        let gameOver = false;
+
+        // A pálya: 1 = Fal, 0 = Pont, 2 = Üres hely (szellemek kezdőhelye)
+        const map = [
+            [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+            [1,0,0,0,0,0,0,1,0,0,0,0,0,0,1],
+            [1,0,1,1,0,1,0,1,0,1,0,1,1,0,1],
+            [1,0,0,0,0,1,0,0,0,1,0,0,0,0,1],
+            [1,0,1,1,0,1,1,1,1,1,0,1,1,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,1,1,0,1,1,2,2,2,1,1,0,1,1,1],
+            [2,2,1,0,1,2,2,2,2,2,1,0,1,2,2],
+            [1,1,1,0,1,1,1,1,1,1,1,0,1,1,1],
+            [1,0,0,0,0,0,0,1,0,0,0,0,0,0,1],
+            [1,0,1,1,1,1,0,1,0,1,1,1,1,0,1],
+            [1,0,0,0,1,0,0,0,0,0,1,0,0,0,1],
+            [1,1,1,0,1,0,1,1,1,0,1,0,1,1,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        ];
+
+        // Pac-Man tulajdonságai
+        let pacman = {
+            x: 1, y: 1, dx: 0, dy: 0, nextDx: 0, nextDy: 0,
+            pixelX: 1 * tileSize, pixelY: 1 * tileSize,
+            speed: 2, mouthOpen: 0.2, mouthDir: 1
+        };
+
+        // Szellemek tulajdonságai
+        // Fontos: a sebességük (1.5) úgy van beállítva, hogy a tileSize (30) osztható legyen vele
+        let ghosts = [
+            { x: 7, y: 7, pixelX: 7 * tileSize, pixelY: 7 * tileSize, dx: 0, dy: -1, speed: 1.5, color: 'red' }, // Blinky
+            { x: 6, y: 7, pixelX: 6 * tileSize, pixelY: 7 * tileSize, dx: 0, dy: -1, speed: 1.5, color: 'pink' }, // Pinky
+            { x: 8, y: 7, pixelX: 8 * tileSize, pixelY: 7 * tileSize, dx: 0, dy: -1, speed: 1.5, color: 'cyan' }  // Inky
+        ];
+
+        document.addEventListener('keydown', (e) => {
+            if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.key) > -1) e.preventDefault();
+            if(e.key === 'ArrowUp') { pacman.nextDx = 0; pacman.nextDy = -1; }
+            if(e.key === 'ArrowDown') { pacman.nextDx = 0; pacman.nextDy = 1; }
+            if(e.key === 'ArrowLeft') { pacman.nextDx = -1; pacman.nextDy = 0; }
+            if(e.key === 'ArrowRight') { pacman.nextDx = 1; pacman.nextDy = 0; }
+        });
+
+        function checkCollision(gridX, gridY) {
+            if (gridY < 0 || gridY >= map.length || gridX < 0 || gridX >= map[0].length) return false; 
+            return map[gridY][gridX] === 1; 
+        }
+
+        function update() {
+            // --- PAC-MAN LOGIKA ---
+            if (pacman.pixelX % tileSize === 0 && pacman.pixelY % tileSize === 0) {
+                pacman.x = pacman.pixelX / tileSize;
+                pacman.y = pacman.pixelY / tileSize;
+
+                if (pacman.x <= 0 && pacman.dx === -1) { pacman.pixelX = (map[0].length - 1) * tileSize; pacman.x = map[0].length - 1; }
+                if (pacman.x >= map[0].length - 1 && pacman.dx === 1) { pacman.pixelX = 0; pacman.x = 0; }
+
+                if (!checkCollision(pacman.x + pacman.nextDx, pacman.y + pacman.nextDy)) {
+                    pacman.dx = pacman.nextDx; pacman.dy = pacman.nextDy;
+                }
+                if (checkCollision(pacman.x + pacman.dx, pacman.y + pacman.dy)) {
+                    pacman.dx = 0; pacman.dy = 0;
+                }
+
+                if (map[pacman.y][pacman.x] === 0) {
+                    map[pacman.y][pacman.x] = 2; 
+                    score += 10;
+                    scoreElement.innerText = score;
+                }
+            }
+
+            pacman.pixelX += pacman.dx * pacman.speed;
+            pacman.pixelY += pacman.dy * pacman.speed;
+
+            if (pacman.dx !== 0 || pacman.dy !== 0) {
+                pacman.mouthOpen += 0.05 * pacman.mouthDir;
+                if (pacman.mouthOpen >= 0.25 || pacman.mouthOpen <= 0) pacman.mouthDir *= -1;
+            }
+
+            // --- SZELLEMEK LOGIKÁJA ---
+            ghosts.forEach(ghost => {
+                // Csak akkor válthatnak irányt, ha a csempe közepén vannak
+                if (ghost.pixelX % tileSize === 0 && ghost.pixelY % tileSize === 0) {
+                    ghost.x = ghost.pixelX / tileSize;
+                    ghost.y = ghost.pixelY / tileSize;
+
+                    let possibleMoves = [];
+                    const directions = [
+                        {dx: 0, dy: -1}, // Fel
+                        {dx: 0, dy: 1},  // Le
+                        {dx: -1, dy: 0}, // Balra
+                        {dx: 1, dy: 0}   // Jobbra
+                    ];
+                    
+                    directions.forEach(dir => {
+                        // Nem fordulhatnak meg 180 fokban maguktól (hogy ne ugráljanak egy helyben)
+                        if (dir.dx === -ghost.dx && dir.dy === -ghost.dy && (ghost.dx !== 0 || ghost.dy !== 0)) return;
+                        // Ha nincs a választott irányban fal, hozzáadjuk a lehetőségekhez
+                        if (!checkCollision(ghost.x + dir.dx, ghost.y + dir.dy)) {
+                            possibleMoves.push(dir);
+                        }
+                    });
+
+                    
+                    if (possibleMoves.length === 0) {
+                        ghost.dx *= -1;
+                        ghost.dy *= -1;
+                    } else {
+                    
+                        let move = possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
+                        ghost.dx = move.dx;
+                        ghost.dy = move.dy;
+                    }
+                }
+
+                ghost.pixelX += ghost.dx * ghost.speed;
+                ghost.pixelY += ghost.dy * ghost.speed;
+
+                if (Math.abs(pacman.pixelX - ghost.pixelX) < tileSize / 1.5 && 
+                    Math.abs(pacman.pixelY - ghost.pixelY) < tileSize / 1.5) {
+                    gameOver = true;
+                }
+            });
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Pálya kirajzolása
+            for (let row = 0; row < map.length; row++) {
+                for (let col = 0; col < map[row].length; col++) {
+                    if (map[row][col] === 1) {
+                        ctx.fillStyle = '#1919A6'; 
+                        ctx.fillRect(col * tileSize, row * tileSize, tileSize, tileSize);
+                        ctx.strokeStyle = '#000';
+                        ctx.strokeRect(col * tileSize, row * tileSize, tileSize, tileSize);
+                    } else if (map[row][col] === 0) {
+                        ctx.fillStyle = '#FFF';
+                        ctx.beginPath();
+                        ctx.arc(col * tileSize + tileSize / 2, row * tileSize + tileSize / 2, 4, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+            }
+
+          
+            ctx.save();
+            ctx.translate(pacman.pixelX + tileSize / 2, pacman.pixelY + tileSize / 2);
+
+            if (pacman.dx === 1) ctx.rotate(0); 
+            else if (pacman.dx === -1) ctx.rotate(Math.PI); 
+            else if (pacman.dy === 1) ctx.rotate(Math.PI / 2); 
+            else if (pacman.dy === -1) ctx.rotate(-Math.PI / 2); 
+
+            ctx.fillStyle = 'yellow';
+            ctx.beginPath();
+            ctx.arc(0, 0, tileSize / 2 - 3, pacman.mouthOpen * Math.PI, (2 - pacman.mouthOpen) * Math.PI);
+            ctx.lineTo(0, 0);
+            ctx.fill();
+            ctx.restore();
+
+            
+            ghosts.forEach(ghost => {
+                let gx = ghost.pixelX + tileSize / 2;
+                let gy = ghost.pixelY + tileSize / 2;
+
+                ctx.fillStyle = ghost.color;
+                ctx.beginPath();
+                // Fej (félkör)
+                ctx.arc(gx, gy, tileSize / 2.2, Math.PI, 0);
+                // Test és "szoknya" (hullámos alj)
+                ctx.lineTo(gx + tileSize / 2.2, gy + tileSize / 2.2);
+                ctx.lineTo(gx + tileSize / 4, gy + tileSize / 3);
+                ctx.lineTo(gx, gy + tileSize / 2.2);
+                ctx.lineTo(gx - tileSize / 4, gy + tileSize / 3);
+                ctx.lineTo(gx - tileSize / 2.2, gy + tileSize / 2.2);
+                ctx.fill();
+
+                
+                ctx.fillStyle = 'white';
+                ctx.beginPath();
+                ctx.arc(gx - 5, gy - 3, 4, 0, Math.PI * 2);
+                ctx.arc(gx + 5, gy - 3, 4, 0, Math.PI * 2);
+                ctx.fill();
+
+                
+                ctx.fillStyle = 'blue';
+                ctx.beginPath();
+                ctx.arc(gx - 5 + ghost.dx * 1.5, gy - 3 + ghost.dy * 1.5, 2, 0, Math.PI * 2);
+                ctx.arc(gx + 5 + ghost.dx * 1.5, gy - 3 + ghost.dy * 1.5, 2, 0, Math.PI * 2);
+                ctx.fill();
+            });
+        }
+
+        function gameLoop() {
+            if (gameOver) {
+                ctx.fillStyle = "rgba(0, 0, 0, 0.75)";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = "red";
+                ctx.font = "bold 40px Courier New";
+                ctx.textAlign = "center";
+                ctx.fillText("JÁTÉK VÉGE", canvas.width / 2, canvas.height / 2 + 10);
+                return; // Megállítja a ciklust
+            }
+
+            update();
+            draw();
+            requestAnimationFrame(gameLoop);
+        }
+
+        gameLoop();
+    </script>
+</body>
+</html>
