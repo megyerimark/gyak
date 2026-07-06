@@ -1,0 +1,6 @@
+Felhasználó_ID ; Név ; Eltöltött_másodperc ; Letöltött_oldalak ; Látogatott_URL-ek_vesszővel
+USR-01;Kovács;120;4;Kezdőlap,Szolgáltatások,Kapcsolat,Blog
+USR-02;Szabó;Száz;2;Kezdőlap,Blog
+USR-03;Tóth;45;0;Kezdőlap
+USR-04;Nagy;300;5;Kezdőlap,Árak,Blog,Kapcsolat,Rólunk
+USR-05;Kiss;60;

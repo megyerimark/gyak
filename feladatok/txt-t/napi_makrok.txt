@@ -1,0 +1,7 @@
+LOG_ID;Kategoria;Kaloria;Feherje_gramm;Osszetevok
+LOG-01;Csirkes Rizs;650;55;Csirkemell,Jazmin rizs,Zoldseg
+LOG-02;Edzes Utani Turmix;150;30;Whey Isolate,Viz
+LOG-03;Csalolapazas;Ezerketto;10;Pizza,Kola
+LOG-04;Marha Steak;800;65;Marhahus,Edesburgonya
+LOG-05;Ures Kave;0;0;Fekete kave
+LOG-06;Turo;250;

@@ -1,0 +1,21 @@
+Formátum hiba: {ID[0]}Formátum hiba: {ID[0]}Inaktív felhasználó (0 oldal): {ID[0]}Formátum hiba: {ID[0]}Formátum hiba: {ID[0]}Formátum hiba: {ID[0]}Formátum hiba: {ID[0]}Inaktív felhasználó (0 oldal): {ID[0]}Formátum hiba: {ID[0]}Formátum hiba: {ID[0]}Formátum hiba: {ID[0]}
+Formátum hiba: {ID[0]}
+Inaktív felhasználó (0 oldal): {ID[0]}
+Formátum hiba: {ID[0]}
+Formátum hiba: {ID[0]}
+Formátum hiba: {ID}
+Formátum hiba: {ID}
+Inaktív felhasználó (0 oldal): {ID}
+Formátum hiba: {ID}
+Formátum hiba: {ID}
+Formátum hiba: {ID}
+Formátum hiba: {ID}
+Inaktív felhasználó (0 oldal): {ID}
+Formátum hiba: {ID}
+Formátum hiba: {ID}
+Formátum hiba: USR-02
+Inaktív felhasználó (0 oldal): USR-03
+Formátum hiba: USR-05
+Formátum hiba: USR-02
+Inaktív felhasználó (0 oldal): USR-03
+Formátum hiba: USR-05
