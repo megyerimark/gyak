@@ -1,0 +1,6 @@
+ID|Nev|Kaszt|Arany|Targyak
+01|YasuoMain|Kardmester|1500|Pancel,Kard,Sisak
+02|NoobSlayer|Ijasz|Hiba|Ijj,Kopeny
+03|TankZilla|Harcos|2200|Pajzs,Sisak,Kard,Cipo
+04|MageLord|Varazslo|800|Bot,Ital
+05|RogueX|Tolvaj|3100|Tor,Kopeny,Erme
