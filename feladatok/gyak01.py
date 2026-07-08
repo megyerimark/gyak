@@ -45,9 +45,10 @@ for kulcs, ertek in jatekosok_szotar.items():
 py.bar(nevek_x, arany_y)
 py.ylabel("Birtokolt Arany")
 py.show()
-print(f"A teljes szerver gazdasága: {szerver_kassza}")Előkészület (A Bemeneti Fájl)
+print(f"A teljes szerver gazdasága: {szerver_kassza}")
 
 
+# Előkészület (A Bemeneti Fájl)
 # Hozd létre a szerver_log.txt fájlt az alábbi tartalommal (az első sor a fejléc!):
 # Plaintext
 # ID|Nev|Kaszt|Arany|Targyak

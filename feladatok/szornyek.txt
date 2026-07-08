@@ -1,0 +1,4 @@
+Szorny_ID;Nev;Eletpont;Loot_Targyak
+S01;Erdei Farkas;150;Bőr,Fog,Hús
+S02;Árnyék Szamuráj;450;Kard,Páncél,Tekercs
+S03;Sárkány;1200;Arany,Pikkely,Tűzkő
