@@ -55,11 +55,11 @@ with open("harci_naplo.txt", "a", encoding='utf-8') as fight:
         bemenet = input("Melyik szörnyet támadod? (S01/S02/S03 vagy 'kilepes'):")
         if bemenet == "kilepes":
             break
-        if bemenet not in szorny_szotar[bemenet][0]:
+        if bemenet not in szorny_szotar:
             print("Nincs ilyen szörny a zónában!")
             continue
         else:
-            print(f"{szorny_szotar[adatok[1]]}")
+            print(f"{szorny_szotar[bemenet][0]}")
             bemenet2 = input("Mekkora alapsebzést osztasz ki?")
         try:
             sebzes = int(bemenet2)
@@ -68,11 +68,18 @@ with open("harci_naplo.txt", "a", encoding='utf-8') as fight:
             print("Melléütöttél! (Hibás számformátum)")
             continue
         else:
-            szorny_szotar[adatok[2]]
-            if vegleges_sebzes >= adatok[2]:
+            if vegleges_sebzes >= szorny_szotar[bemenet][1]:
                 legyozott_szornyek_szama += 1
-                epic_loot = szorny_szotar[adatok[3]].split(",")[::-1]
-                print(f"Legyőzted a(z) {epic_loot[1]}-t! Zsákmány: {epic_loot[3]}.")
-                fight.write(f"Legyőzted a(z) {adatok[1]}-t! Zsákmány: {adatok[3]}.")
-print(f"A harctér kiürült. Összesen legyőzött szörnyek száma: {legyozott_szornyek_szama}.")
+                epic_loot = szorny_szotar[bemenet][2].split(",")[::-1][0]
+            # if vegleges_sebzes >= adatok[2]:
+            # if vegleges_sebzes >= szorny_szotar[bemenet][1]:
+            #     legyozott_szornyek_szama += 1
+            #     # epic_loot = szorny_szotar[adatok[3]].split(",")[::-1]
+            #     epic_loot = szorny_szotar[bemenet][2].split(",")[::-1][0]
+                print(f"Legyőzted a(z) {epic_loot[1]}-t! Zsákmány: {epic_loot[2]}.")
+                print(f"Legyőzted a(z) {szorny_szotar[bemenet][0]}-t! Zsákmány: {epic_loot}.")                
+                fight.write(f"Legyőzted a(z) {epic_loot[1]}-t! Zsákmány: {epic_loot[2]}.")
+
+# print(f"Legyőzted a(z) {szorny_szotar[bemenet][0]}-t! Zsákmány: {epic_loot}.")                fight.write(f"Legyőzted a(z) {epic_loot[1]}-t! Zsákmány: {epic_loot[3]}.")
+# print(f"A harctér kiürült. Összesen legyőzött szörnyek száma: {legyozott_szornyek_szama}.")
             

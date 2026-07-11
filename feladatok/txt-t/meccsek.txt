@@ -1,0 +1,6 @@
+Meccs_ID;Karakter;K/D/A;Rang;Eredmeny
+M01;Yasuo;10/2/5;Arany;Gyozelem
+M02;Zed;4/5/2;Ezüst;Vereseg
+M03;Yasuo;15/0/8;Arany;Gyozelem
+M04;Ahri;Hiba/2/4;Bronz;Vereseg
+M05;Yasuo;2/8/1;Arany;Vereseg

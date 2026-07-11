@@ -1,0 +1,9 @@
+We need to make the interface interactive. The developer must create a custom Python function. 
+After that, add a Button widget to the window.
+ When the user clicks the button, it must trigger the function using the command parameter.
+
+ Szükségünk lenne egy  ........ . 
+ A fejlesztő hozzon létre egy szabványos python funkciót.
+ utána adjon hozzá egy gomb widgetet az ablakhoz 
+ amikor a felhasználó rákattint a gombra akkor elindítja a függvényt a paranccsal
+ 

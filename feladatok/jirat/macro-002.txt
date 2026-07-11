@@ -1,0 +1,12 @@
+"We need a graphical user interface (GUI) for our macro tracker. 
+The script must initialize a main window using Tkinter,
+ set the window title and dimensions, and display a welcome text on the screen.
+  Finally, it must run the application's main loop to keep the window open."
+
+
+Szükségünk van egy GUI alkalmazásra a macrón követőre. 
+A kódban létre kell hozni egy  fő ablakot.
+Haszánlja a tkinter-t állítsa be az ablak címét,
+ méreteit és a képernyőre irassa ki az Üdvözöljük.
+Végezetül futtatnia kell az alkalmazás fő motorját (main loop),
+ hogy az ablak nyitva maradjon.  

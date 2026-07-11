@@ -1,0 +1,11 @@
+We need a Python script to read macro_log.txt. 
+The script must parse the daily intake of chicken breast, 
+rice, oats, and protein powder. It should calculate the 
+total daily protein intake using a custom function, handle missing data with
+ try-except, and store the results in a dictionary."
+
+
+Szükségünk van egy Python kódra ami olvassa a macro_log-txt-t. A kóddnak elemeznia kell
+ a csikremellet rizs, zabot és a fehérjeport. KI kell számolnia az adatbevitel egy egyedi függvény használatával
+ kezelni a hiányos try-except és tárolja az eredményeket egy könyvtárban. 
+ 

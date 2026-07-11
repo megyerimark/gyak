@@ -1,0 +1,5 @@
+Date;FoodItem;Weight_g;Protein_per_100g
+2026-07-10;Oats;80;13
+2026-07-10;Protein Powder;60;80
+2026-07-10;Rice;120;Error
+2026-07-10;Chicken Breast;250;23
