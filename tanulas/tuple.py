@@ -7,7 +7,7 @@ print(tup1.count("barbi"))
 
 
 tup3 = ('Betti', )
-print(tup3.upper())
+print(tup3.append())
 
 # lista.append("Tmpon")
 # print(lista)
