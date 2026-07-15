@@ -1,0 +1,1 @@
+"We need to refactor the existing Yasuo KDA analyzer into a GUI application. The app requires a Tkinter window and a button. The button must trigger a function that reads the match data, calculates the KDA via an imported module, handles errors with try-except, and renders a Matplotlib bar chart."

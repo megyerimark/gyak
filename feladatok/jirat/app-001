@@ -1,0 +1,7 @@
+itle: Diet Tracker - Fehérje Validátor Motor
+Assignee: Márk (Junior Full-Stack Developer)
+Status: TO DO
+
+Description:
+
+"Szükségünk van a saját makrókövető webalkalmazásod (backend) alap logikájára. A programnak egy listából kell beolvasnia a napi étkezéseket, és automatikusan meg kell jelölnie azokat, amik megfelelnek a magas fehérjetartalmú (High Protein) kategóriának."

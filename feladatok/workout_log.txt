@@ -1,0 +1,7 @@
+Date;Exercise;Sets;Reps;Weight_kg
+2026-07-12;Bench Press;4;8;80
+2026-07-12;Squat;3;10;100
+2026-07-12;Deadlift;Null;5;120
+2026-07-12;Overhead Press;4;8;50
+2026-07-12;Barbell Row;Error;10;70
+2026-07-12;Bicep Curl;3;12;30

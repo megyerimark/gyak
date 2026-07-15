@@ -1,0 +1,1 @@
+he Risk Management team needs a backend Python module to process and evaluate personal loan applications. The developer must create an object-oriented structure where each client is an object. The class must calculate the risk based on basic financial rules (simplified JTM) and store the final decision

@@ -1,0 +1,1 @@
+The Core Banking team needs a Python class to handle everyday customer bank accounts. The object must securely store the customer's balance and handle deposits (befizetés) and withdrawals (kifizetés) applying basic banking logic

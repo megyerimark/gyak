@@ -1,0 +1,1 @@
+"The client needs a desktop application to track their gym progression. The app must read data from workout_log.txt. It needs to calculate the 'Total Volume' (sets * reps * weight) for each exercise using an external custom module. The data must be parsed, validated with try-except, stored in a dictionary, and finally visualized as a bar chart via a Tkinter button click."
