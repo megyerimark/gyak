@@ -1,0 +1,4 @@
+Nev,Tipus,NettoJovedelem,KertTorleszto
+Kovacs Janos,Alap,3500000,1500
+Nagy Eszter,Premium,80000000,500000
+Toth Máté,Alap,25000000,130000

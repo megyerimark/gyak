@@ -1,0 +1,7 @@
+Title: FinTech Csalásfigyelő Rendszer (Fraud Detector)
+Assignee: Márk (Junior Backend Developer)
+Status: TO DO
+
+Description:
+
+"A bankkártyás fizetéseknél szükségünk van egy automata biztonsági ellenőrzőre. Ha egy vásárlás összege gyanúsan magas (több mint 100 000 Ft), a rendszernek azonnal blokkolnia kell a tranzakciót, és be kell tennie egy feketelistába. A normál, hétköznapi vásárlásokat egyszerűen csak át kell engednie."

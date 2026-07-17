@@ -1,0 +1,7 @@
+Title: DietApp - Étkezés Összesítő Motor
+Assignee: Márk (Junior Full-Stack Developer)
+Status: TO DO
+
+Description:
+
+"Az egyedi ételeket már tökéletesen kezeli a rendszer. Most fel kell építenünk magát a fő alkalmazást (DietApp), ami képes magába fogadni ezeket az ételeket, és a nap végén egy összesítést nyomtatni a felhasználónak."

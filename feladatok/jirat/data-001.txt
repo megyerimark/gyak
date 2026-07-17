@@ -1,0 +1,6 @@
+🎫 JIRA TICKET: [DATA-001]
+Title: Táplálkozási Napló Adatelemzés (Pandas Alapok)
+Assignee: Márk (Junior Data Analyst)
+Status: TO DO
+Description:
+"Kaptunk egy nyers adathalmazt egy felhasználó reggeli étkezéseiről. Be kell töltenünk ezt a Pandas könyvtár segítségével, és meg kell vizsgálnunk a nyers táblázatot."

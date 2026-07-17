@@ -1,0 +1,1 @@
+él: Egy olyan backend script megírása, ami beolvassa a beérkező hitelkérelmeket egy fájlból, objektumokat készít belőlük, és automatikusan lefuttatja az alapvető JTM (Jövedelemarányos Törlesztőrészlet Mutató) kockázatelemzést.
