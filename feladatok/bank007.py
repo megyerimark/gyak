@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import streamlit as st
 class Kliens:
     def __init__(self, nev, jovedelem,hitel):
         self.nev = nev

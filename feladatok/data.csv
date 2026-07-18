@@ -1,0 +1,51 @@
+ID,Nev,Eletkor,Netto_Jovedelem,Kert_Hitel,Hitel_Tipus,VIP_Statusz
+1,Kovács Gábor,42,450000,12000000,Lakáshitel,Nem
+2,Nagy Eszter,28,320000,1500000,Személyi hitel,Nem
+3,Tóth Zoltán,55,850000,25000000,Lakáshitel,Igen
+4,Szabó Anna,34,510000,4500000,Autólízing,Nem
+5,Kiss Péter,47,400000,8000000,Szabadfelhasználású,Nem
+6,Varga Éva,39,720000,18000000,Lakáshitel,Igen
+7,Farkas László,61,310000,1000000,Személyi hitel,Nem
+8,Papp Mária,25,280000,3000000,Autólízing,Nem
+9,Takács István,44,560000,15000000,Lakáshitel,Nem
+10,Juhász Katalin,31,480000,2000000,Személyi hitel,Nem
+11,Mészáros Gergő,50,920000,35000000,Lakáshitel,Igen
+12,Simon Réka,29,380000,5000000,Szabadfelhasználású,Nem
+13,Horváth Bence,36,410000,4000000,Autólízing,Nem
+14,Kelemen Dóra,41,650000,22000000,Lakáshitel,Igen
+15,Lukács Dávid,33,350000,1200000,Személyi hitel,Nem
+16,Fekete Boglárka,27,420000,6000000,Autólízing,Nem
+17,Balogh Tibor,58,780000,10000000,Szabadfelhasználású,Igen
+18,Török Zsófia,45,530000,14000000,Lakáshitel,Nem
+19,Illés Márton,32,390000,2500000,Személyi hitel,Nem
+20,Somogyi Klára,49,610000,8000000,Szabadfelhasználású,Nem
+21,Vass Attila,37,850000,28000000,Lakáshitel,Igen
+22,Bodnár Lilla,26,290000,3500000,Autólízing,Nem
+23,Kocsis András,43,470000,5000000,Személyi hitel,Nem
+24,Gál Emma,35,550000,16000000,Lakáshitel,Nem
+25,Fodor Tamás,52,700000,12000000,Szabadfelhasználású,Igen
+26,Pintér Laura,30,410000,4500000,Autólízing,Nem
+27,Szalai Ádám,38,620000,20000000,Lakáshitel,Nem
+28,Hegedűs Nóra,28,340000,1800000,Személyi hitel,Nem
+29,Sipos Balázs,46,890000,30000000,Lakáshitel,Igen
+30,Halász Viktória,34,480000,7000000,Szabadfelhasználású,Nem
+31,Bognár Krisztián,51,560000,9000000,Autólízing,Nem
+32,Bíró Judit,40,680000,24000000,Lakáshitel,Igen
+33,László Csaba,33,370000,2000000,Személyi hitel,Nem
+34,Katona Petra,29,430000,5500000,Autólízing,Nem
+35,Vincze Gábor,47,750000,15000000,Lakáshitel,Igen
+36,Fazekas Anikó,54,490000,4000000,Szabadfelhasználású,Nem
+37,Kovács Dániel,31,520000,13000000,Lakáshitel,Nem
+38,Orsós Mónika,36,360000,1500000,Személyi hitel,Nem
+39,Magyar Levente,42,810000,26000000,Lakáshitel,Igen
+40,Sándor Tímea,27,310000,3800000,Autólízing,Nem
+41,Pap Márk,39,580000,8500000,Szabadfelhasználású,Nem
+42,Novák Fanni,44,660000,21000000,Lakáshitel,Igen
+43,Nemes Róbert,35,440000,3000000,Személyi hitel,Nem
+44,Veres Beatrix,48,730000,11000000,Szabadfelhasználású,Nem
+45,Csonka Milán,30,460000,6000000,Autólízing,Nem
+46,Pásztor Kinga,53,600000,17000000,Lakáshitel,Nem
+47,Majoros Patrik,37,950000,32000000,Lakáshitel,Igen
+48,Orosz Diána,26,330000,2200000,Személyi hitel,Nem
+49,Dudás Zsombor,41,540000,7500000,Autólízing,Nem
+50,Fábián Zita,32,690000,19000000,Lakáshitel,Igen
