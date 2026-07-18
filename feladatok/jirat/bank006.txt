@@ -1,0 +1,1 @@
+Cél: Egy olyan folyamatosan futó Python script írása, ami konzolon keresztül (input) kéri be az ügyfelek adatait, biztonságosan lekezeli a hibás beviteleket (try-except), objektumokat gyárt belőlük (OOP), és a műszak végén grafikonon ábrázolja a napi eredményt (matplotlib).
