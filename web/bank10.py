@@ -1,5 +1,7 @@
 import streamlit as st
 import numpy as np
+import pandas as pd
+import os
 
 class Kiadas:
     def __init__(self, kategoria, osszeg):
@@ -8,11 +10,21 @@ class Kiadas:
         
     def elbiralas(self):
         if self.osszeg > 50000:
-            st.warning("Vezetői Jóváhagyás szükséges")
+            return "Függőben"
         else:
-            st.success("Autómaitkus Jóváhagyás")
-
-
+            return "Jóváhagyva"
+        
+def adat_betoltes():
+    if os.path.exists('kiadasok.csv'):
+        return pd.read_csv("kiadasok.csv")
+    else:
+        return pd.DataFrame(columns=[
+            "Kategória",
+            "Összeg",
+            "Részletek",
+            "Státusz"
+        ])
+df = adat_betoltes()
 class EszkozBeszerzes(Kiadas):
     def __init__(self, kategoria, osszeg, eszkoz_neve):
         super().__init__(kategoria, osszeg)
@@ -37,13 +49,39 @@ elif options == "IT Eszköz":
 btn = st.button("Beküldés")
 
 
+
 if btn: 
     st.write("Az általad megadott helyszín: ", bem)
     if options == "IT Eszköz":
-        eszkoz = EszkozBeszerzes(options, price, bem)      
+        eszkoz = EszkozBeszerzes(options, price, bem)  
+        statusz = eszkoz.elbiralas()    
     else:
         ki = Kiadas(options, price)
-        ki.elbiralas()
+        statusz = ki.elbiralas()
+        
+        if statusz == "Jóváhagyva":
+            st.success("Jóváhagyva")
+        else:
+            st.warning("Vezetői jóváhagyásra van szükség")
+        
+    uj_sor = pd.DataFrame([{
+                "Kategória": options,
+                "Összeg": price,
+                "Részletek": bem,
+                "Státusz": statusz
+            }])
+    df = pd.concat([df, uj_sor], ignore_index=True)
+    df.to_csv("kiadasok.csv", index=False)
+    st.toast("Kiadás rögzítve az adatbázisban! 💾")
+    
+
+        
+data =  pd.read_csv("kiadasok.csv")
+st.write(data)
+        
+        
+        
+        
         
         
 # # if options == "Utazás":
@@ -92,3 +130,12 @@ if btn:
 #     else:
 #         ki = Kiadas(options,price)
 #         Kiadas.elbiralas(ki)
+            # uj_sor = pd.DataFrame([{
+            #     "Kategória": options,
+            #     "Összeg": price,
+            #     "Részletek": bem,
+            #     "Státusz": statusz
+            # }])
+            # df = pd.concat([dt, uj_sor], ignore_index=True)
+            # # df.to_csv=("Kiadasok.csv", index = False)
+            
